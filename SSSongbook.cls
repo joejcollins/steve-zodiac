@@ -28,7 +28,6 @@
 \RequirePackage{hyperref} % Hyperlinks in the PDFs
 \RequirePackage{fancyhdr} % Nicer headers for the revision information
 \RequirePackage[british]{babel} % UK style dates
-\RequirePackage[nofancy, today]{svninfo} % Subversion information
 \RequirePackage[T1]{fontenc} % Required for superscripts for ordinals, don't know why
 \RequirePackage{ulem} % Provides the strike out
 \RequirePackage{ifthen} % Used to do conditional transpositions
@@ -61,21 +60,18 @@
 %%
 % Add a table of contents entry to the Song Environment, then
 % set the headers with the revision and file tracking information
-% and finally rename the enviroment to be consistent
+% and finally rename the environment to be consistent
 %% 
-\newenvironment{SBSong}[5][Y]%
+\newenvironment{SBSong}[4][Y]%
 {%
   \phantomsection % required by hyperref
-  \svnInfo #3 % Id for SvnInfo
     \begin{samepage}  
       \ifChordBk
-        %\fancyhead[RE,LO]{#2 - Revision: \svnInfoRevision}% Revision % REMOVE FOR PRINT VERSION
         \fancyhead[RO,LE]{\thepage}% Page number
-        %\fancyfoot[R]{\small\svnInfoFile}% filename % REMOVE FOR PRINT VERSION
         \begin{song}[#1]{#2}% Title
               {}%
-              {#4}% Factoid
-              {#5}% Author
+              {#3}% Factoid
+              {#4}% Author
               {}{}%
       \fi
       \ifWordBk
@@ -84,12 +80,11 @@
         \renewcommand{\SBWAndMTag}{} % No author
         \renewcommand{\SpaceAfterTitleBlk}{-2.75ex} % Close space after title bit
         \begin{song}[#1]{#2}% Title
-              {#3}% Key
+              {#2}% Key
               {~ \vspace{-3.5ex}}% close up the factoid space
               {}% No author
               {}{}%
       \fi
-    % \addcontentsline{toc}{section}{\theSBSongCnt\ #2 {\tiny (r \svnInfoRevision)}}\index{#2}% REMOVE FOR PRINT VERSION
     \addcontentsline{toc}{section}{\theSBSongCnt\ #2}\index{#2}%
 }%
 {%
@@ -100,7 +95,7 @@
 }%
 
 %%
-% Hack to remove the square brackets arount the key.
+% Hack to remove the square brackets around the key.
 %% 
 \renewcommand{\STitle}[3][Y]{%
   \setcounter{SBVerseCnt}{0}%
