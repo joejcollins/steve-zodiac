@@ -1,0 +1,51 @@
+%\documentclass[11pt, a5paper, wordbk]{../SSSongbook}
+\documentclass[11pt, a4paper, chordbk]{../SSSongbook}
+\makeindex
+\begin{document}
+\svnInfo $Id: 00ArtsFest.tex 634 2011-07-12 09:53:53Z LudwigVanBoll@gmail.com $
+\let\cleardoublepage\clearpage % Start new page on odd or even pages
+
+\SBTitlePage{
+    {\Large THE}\\[\baselineskip]
+    {\LARGE SHROPSHIRE STRUMMERS }\\[\baselineskip]
+    {\Huge  Arts Festival Songbook}\\[\baselineskip]
+    {for \ukuleleSize}}
+  {Edited by\\
+    His Holiness, the Enlightened and Most Revered\\
+    Duke Ludwig Van Boll III}
+
+\newcommand{\blankpage}{%
+	\newpage
+	\thispagestyle{empty}
+	\vspace*{\fill}
+	\begin{center} 
+		\mbox{This page is intentionally left blank.}
+	\end{center} 
+	\vspace{\fill}
+	\newpage
+}
+\ifChordBk
+  \input{../Songbook01/40FiveYearsTime.tex}
+\fi
+\input{../Songbook01/43DownByTheRiverside.tex}
+\input{../Songbook01/04FiveFootTwo.tex}
+\input{../Songbook01/24Sway.tex}
+\input{../Songbook01/31EnjoyYourself.tex}
+\ifChordBk
+  \blankpage
+  \input{../Songbook02/27Lola.tex}
+\fi
+\input{../Songbook01/25Delilah.tex}
+\ifChordBk
+  \blankpage
+\fi
+\input{../Songbook01/07BigRockCandyMountain.tex}
+\input{../Songbook01/55LeaningOnALampPost.tex}
+\input{../Songbook02/42OldTimeyMedley.tex}
+\input{../Songbook01/01DeepInTheHeartOfTexas.tex}
+\input{../Songbook01/09BootsAreMadeForWalking.tex}
+\ifChordBk
+  \input{../Songbook01/71WeAreGoingToBeFriends.tex}
+\fi
+
+\end{document}
