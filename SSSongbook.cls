@@ -114,13 +114,20 @@
 \newcommand\SBDirection[1]{\ifChordBk {\ChFont #1}  \fi}
 
 %%
-% Title page layout with head url and compilation information.
+% Title page layout
 %%
 \newcommand\SBTitlePage[2]{
   \title{#1}
   \author{#2}
   \maketitle
 }%
+
+%%
+% Each song on same page if possible
+%%
+\let\OldSBSong\SBSong
+\let\endOldSBSong\endSBSong
+\renewenvironment{SBSong}{\begin{samepage}\begin{OldSBSong}}{\end{OldSBSong}\end{samepage}\pagebreak}
 
 %%
 % Convenient superscripts for ordinals
