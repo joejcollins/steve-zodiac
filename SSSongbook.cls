@@ -23,10 +23,13 @@
 % Packages
 %%
 \LoadClass{book}
+% `fancyhdr` clashes withe `songbook` if it is loaded after `songbook`,
+% so it has to be loaded first.  Previously this wasn't the case but
+% `fancyhdr` was updated in 2019 so the change might have happened then.
+\RequirePackage{fancyhdr} % Nicer headers for the revision information
 \RequirePackage{songbook} % Songbook layouts
 \RequirePackage{gchords} % Layout the ukulele chords
 \RequirePackage{hyperref} % Hyperlinks in the PDFs
-\RequirePackage{fancyhdr} % Nicer headers for the revision information
 \RequirePackage[british]{babel} % UK style dates
 \RequirePackage[T1]{fontenc} % Required for superscripts for ordinals, don't know why
 \RequirePackage{ulem} % Provides the strike out

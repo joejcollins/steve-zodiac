@@ -108,3 +108,7 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+# vscode
+settings.json
+
