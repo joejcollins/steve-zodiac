@@ -1,8 +1,10 @@
 #!/bin/sh
 
-# This script is run after the container is created.
-make clean
-make venv
-
-# Install pre-commit hooks
-.venv/bin/pre-commit install
+# Install the styles not in TeXlive
+mkdir -p ~/texmf/tex/latex/conditionals
+cp conditionals.sty ~/texmf/tex/latex/conditionals/
+mkdir -p ~/texmf/tex/latex/gchords
+cp gchords.sty ~/texmf/tex/latex/gchords/
+mkdir -p ~/texmf/tex/latex/songbook
+cp songbook.sty ~/texmf/tex/latex/songbook/
+mktexlsr ~/texmf

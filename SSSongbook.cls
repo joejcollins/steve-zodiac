@@ -3,7 +3,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
 \ProvidesClass{SSSongbook}
-              [2010/03/19 Shropshire Strummers Songbook]
+[2010/03/19 Shropshire Strummers Songbook]
 
 %% 
 % Options inherited from book.cls and songbook.cls
@@ -17,7 +17,7 @@
 % Option of Caroline's baritone
 \newif\ifBaritone \Baritonefalse
 \DeclareOption{baritone}{\Baritonetrue}
-\ProcessOptions 
+\ProcessOptions
 
 %% 
 % Packages
@@ -68,29 +68,29 @@
 \newenvironment{SBSong}[4][Y]%
 {%
   \phantomsection % required by hyperref
-    \begin{samepage}  
-      \ifChordBk
-        \fancyhead[RO,LE]{\thepage}% Page number
-        \begin{song}[#1]{#2}% Title
-              {}%
-              {#3}% Factoid
-              {#4}% Author
-              {}{}%
-      \fi
-      \ifWordBk
-        \fancyfoot[R]{}% 
-        \fancyhead[RO,LE]{}% 
-        \renewcommand{\SBWAndMTag}{} % No author
-        \renewcommand{\SpaceAfterTitleBlk}{-2.75ex} % Close space after title bit
-        \begin{song}[#1]{#2}% Title
-              {#2}% Key
-              {~ \vspace{-3.5ex}}% close up the factoid space
-              {}% No author
-              {}{}%
-      \fi
+  \begin{samepage}
+  \ifChordBk
+    \fancyhead[RO,LE]{\thepage}% Page number
+    \begin{song}[#1]{#2}% Title
+    {}%
+    {#3}% Factoid
+    {#4}% Author
+    {}{}%
+  \fi
+  \ifWordBk
+  \fancyfoot[R]{}% 
+  \fancyhead[RO,LE]{}% 
+  \renewcommand{\SBWAndMTag}{} % No author
+  \renewcommand{\SpaceAfterTitleBlk}{-2.75ex} % Close space after title bit
+  \begin{song}[#1]{#2}% Title
+    {#2}% Key
+    {~ \vspace{-3.5ex}}% close up the factoid space
+    {}% No author
+    {}{}%
+    \fi
     \addcontentsline{toc}{section}{\theSBSongCnt\ #2}\index{#2}%
-}%
-{%
+    }%
+    {%
   \end{song}%
   \end{samepage}
   \fancyhead[LO,RE]{}% blank the headers
@@ -105,10 +105,10 @@
   \setcounter{SBSectionCnt}{0}%
   \vspace{\SpaceAboveSTitle}%
   \if#1Y\begin{center}\fi
-    {\STitleNumberFont\theSBSongCnt}{\STitleFont\ --- #2}%
-  \if#1Y\end{center}\fi
+      {\STitleNumberFont\theSBSongCnt}{\STitleFont\ --- #2}%
+      \if#1Y\end{center}\fi
   \STitleMarkboth{#2}{\relax}%
-  }
+}
 
 %%
 % Provide stage direction and song notes which don't come out in 
@@ -146,18 +146,18 @@
 %%
 \newcommand{\WBLineBrk}{%
   \ifWordBk%
-  \linebreak
-\fi}
+    \linebreak
+  \fi}
 \newcommand{\CBLineBrk}{%
   \ifChordBk%
-  \hfill\strut\linebreak
-\fi}
+    \hfill\strut\linebreak
+  \fi}
 
 %%
 % Alter the chord diagram defaults to suit the ukulele.
 %%
 \renewcommand\strings{4}
-\newcounter{defaultFrets} 
+\newcounter{defaultFrets}
 \setcounter{defaultFrets}{5}
 \renewcommand\numfrets{\value{defaultFrets}}
 \smallchords
@@ -167,12 +167,12 @@
 %%
 \newcommand\ChordInMargin[2]
 {%
-    \SBMargNote{\chord{t}{#1}{#2}}%
+  \SBMargNote{\chord{t}{#1}{#2}}%
 }%
 
 \newcommand\LetterToDiagram[3]
 {%
-    \ifthenelse{\equal{#1}{#2}}{\ChordInMargin{#3}{#1}}{}%
+  \ifthenelse{\equal{#1}{#2}}{\ChordInMargin{#3}{#1}}{}%
 }%
 
 % http://www.ukulele.nl/chordfinder.php
@@ -182,10 +182,10 @@
   \LetterToDiagram{#1}{A7}{n,p1,n,n}
   \LetterToDiagram{#1}{A9}{n,p1,n,p2}
   \LetterToDiagram{#1}{Am}{p2,n,n,n}
-  \LetterToDiagram{#1}{Am7}{n,n,n,n} 
+  \LetterToDiagram{#1}{Am7}{n,n,n,n}
   \LetterToDiagram{#1}{A$\flat$maj7}{n,p3,p4,p3}
   \LetterToDiagram{#1}{Aminadd9}{p2,n,n,p2}
-  \LetterToDiagram{#1}{Asus4}{p2,p2,n,n}  
+  \LetterToDiagram{#1}{Asus4}{p2,p2,n,n}
   \LetterToDiagram{#1}{B}{p4,p3,p2,p2}
   \LetterToDiagram{#1}{B7}{p2,p2p3,p2,p2}
   \LetterToDiagram{#1}{B$\flat$}{p3,p2,p1,p1}
@@ -207,10 +207,10 @@
   \LetterToDiagram{#1}{Bar D}{p2,p2,p2,p2p5}
   \renewcommand\numfrets{8}\LetterToDiagram{#1}{Bar D alt}{p5p7,p5p6,p5,p5}\renewcommand\numfrets{\value{defaultFrets}}
   \LetterToDiagram{#1}{Dsus4}{p2,p2,p2p3,p2p5}
-  \LetterToDiagram{#1}{D7}{p2,p2,p2,p3} 
-  \LetterToDiagram{#1}{D$\flat$7}{p1,p1,p1,p2} 
-  \LetterToDiagram{#1}{Hawaiian D7}{p2,n,p2,n} 
-  \LetterToDiagram{#1}{Dm7}{p2,p2,p1,p3} 
+  \LetterToDiagram{#1}{D7}{p2,p2,p2,p3}
+  \LetterToDiagram{#1}{D$\flat$7}{p1,p1,p1,p2}
+  \LetterToDiagram{#1}{Hawaiian D7}{p2,n,p2,n}
+  \LetterToDiagram{#1}{Dm7}{p2,p2,p1,p3}
   \LetterToDiagram{#1}{Dm}{p2,p2,p1,n}
   \renewcommand\numfrets{8}\LetterToDiagram{#1}{Bar Dm}{p5p7,p5,p5,p5}\renewcommand\numfrets{\value{defaultFrets}}
   \renewcommand\numfrets{8}\LetterToDiagram{#1}{Bar Dm7}{p5,p5,p5,p5}\renewcommand\numfrets{\value{defaultFrets}}
@@ -219,7 +219,7 @@
   \LetterToDiagram{#1}{E7+5}{p1,p2,n,p2p3}
   \LetterToDiagram{#1}{Em}{n,p4,p3,p2}
   \LetterToDiagram{#1}{Em7}{n,p2,n,p2}
-  \LetterToDiagram{#1}{E$\flat$}{n,p3,p3,p1}  
+  \LetterToDiagram{#1}{E$\flat$}{n,p3,p3,p1}
   \LetterToDiagram{#1}{Ebm}{n,p3,p2,p1}
   \LetterToDiagram{#1}{F}{p2,n,p1,n}
   \LetterToDiagram{#1}{F7}{p2,p3,p1,n}
@@ -254,9 +254,9 @@
     \LetterToDiagram{#1}{C7}{p2,p3,p1,n}
     \LetterToDiagram{#1}{C7sus}{p3,p3,p1,p3}
     \LetterToDiagram{#1}{D}{n,p2,p3,p2}
-    \LetterToDiagram{#1}{D7}{n,p2,p1,p2} 
+    \LetterToDiagram{#1}{D7}{n,p2,p1,p2}
     \LetterToDiagram{#1}{Dm7}{n,p2,p1,p1}
-    \LetterToDiagram{#1}{D$\flat$7}{p3,p4,n,p4} 
+    \LetterToDiagram{#1}{D$\flat$7}{p3,p4,n,p4}
     \LetterToDiagram{#1}{Dm}{p3,p2,p3,p1}
     \LetterToDiagram{#1}{E}{p2,p1,n,n}
     \LetterToDiagram{#1}{E7}{n,p1,n,n}
@@ -272,7 +272,7 @@
     \LetterToDiagram{#1}{G}{n,n,n,p3}
     \LetterToDiagram{#1}{G$\flat$}{p4,p3,p2,p2}
     \LetterToDiagram{#1}{G7}{n,n,n,p1}
-    \LetterToDiagram{#1}{Gm}{n,p3,p3,p3}  
+    \LetterToDiagram{#1}{Gm}{n,p3,p3,p3}
     \LetterToDiagram{#1}{G\#7}{p1,p1,p1,p1p2}
   }%
 \fi
