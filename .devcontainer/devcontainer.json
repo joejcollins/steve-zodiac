@@ -1,13 +1,10 @@
 {
-	"name": "LaTeX on colonel-white",
-	"image": "ghcr.io/joejcollins/colonel-white:latest",
+	"name": "LaTeX on steve-zodiac",
+	"image": "ghcr.io/joejcollins/steve-zodiac:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"aaron-bond.better-comments",
 				"james-yu.latex-workshop",
-				"ms-toolsai.jupyter",
-				"ms-python.python",
 				"shardulm94.trailing-spaces",
 				"stkb.rewrap",
 				"streetsidesoftware.code-spell-checker",

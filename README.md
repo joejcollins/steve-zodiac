@@ -1,7 +1,11 @@
-songbooks
-=========
+# songbooks
 
-Shropshire Strummers songbooks in LaTeX
+Stretton Strummers songbooks in LaTeX
 
-mkdir -p ~/texmf/tex/latex/gchords
-mv gchords.sty ~/texmf/tex/latex/gchords/
+## Cover Art
+
+The font used on the covers is...
+
+umbx10 at 48px high.
+
+The font is a True Type Font (umbx10.ttf) from <http://www.truetex.com/>.

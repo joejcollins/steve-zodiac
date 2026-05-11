@@ -1,0 +1,44 @@
+\documentclass[12pt, a5paper, wordbk]{../SSSongbook}
+
+\makeindex
+\begin{document}
+
+\renewcommand\today{November 2017}
+\SBTitlePage{
+    {\Large THE}\\[\baselineskip]
+    {\LARGE SHROPSHIRE STRUMMERS }\\[\baselineskip]
+    {\Huge Old Time Music Hall}\\[\baselineskip]
+    \ifChordBk {for \ukuleleSize} \fi
+    }
+  {Compiled by\\
+    The Great Leader,\\
+    The Dear Leader,\\
+    Barbarella\\ and\\ Ludwig Van Boll}
+
+\ifChordBk
+  \fancyhead[R,L]{}
+  \tableofcontents %
+  \vfil
+  This songbook is the work of the Shropshire Strummers
+  and represents their interpretation of the songs. 
+  You may only use this songbook for private study, 
+  scholarship, or research.\par
+  \begin{center}
+    \url{http://www.shropshirestrummers.co.uk/}
+  \end{center}
+  \pagebreak 
+\fi
+
+% 1,3,5,23,30,48,51,55,61,69
+
+\input{../songbook_01/02YouAreMySunshine.tex}
+\input{../songbook_01/04FiveFootTwo.tex}
+\input{../songbook_01/07BigRockCandyMountain.tex}
+\input{../songbook_01/43DownByTheRiverside.tex}
+\input{../songbook_01/55LeaningOnALampPost.tex}
+\input{../songbook_02/20WaltzingMatilda.tex}
+\input{../songbook_02/29WhenImCleaningWindows.tex}
+\input{../songbook_02/34Clementine.tex}
+\input{../songbook_02/42OldTimeyMedley.tex}
+\input{../songbook_03/04SweetGeorgiaBrown.tex}
+\end{document}

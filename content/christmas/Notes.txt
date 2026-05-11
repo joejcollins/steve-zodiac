@@ -1,0 +1,34 @@
+
+The font used on the front cover is...umbx10 at 84px high.
+
+Font used on the back cover is ...umbx10 at 62px high.
+
+The font is a True Type Font (umbx10.ttf) from http://www.truetex.com/
+
+1 Away In A Manger 
+2 A Spaceman Came Traveling 
+3 It's Beginning to Look a Lot Like Christmas 
+4 Carol of the Drum 
+5 Christmas Time 
+6 Deck The Halls 
+7 I'm Dreaming of a White Christmas
+8 Frosty the Snowman 
+9 Happy Christmas (War Is Over)
+10 Have Yourself A Merry Little Christmas 
+11 In The Bleak Mid Winter 
+12 I Wish It Could Be Christmas 
+13 Jingle Bells 
+14 Let It Snow 
+15 Mele Kalikimaka 
+16 Merry Xmas Everybody 
+17 Must Be Santa 
+18 Rockin' Around the Christmas Tree 
+19 Rudolf The Red Nosed Reindeer 
+20 Santa Claus Is Coming To Town 
+21 Silent Night 
+22 Stille Nacht, heilige Nacht
+23 The Twelve Days of Christmas 
+24 Winter Wonderland 
+25 When A Child Is Born 
+26 We Wish You a Merry Christmas 
+27 Edelweiss 

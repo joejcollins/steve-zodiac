@@ -1,0 +1,59 @@
+                        TrueTeX Universal Modern Fonts
+                            Copyright 1999, 2005
+                                Richard Kinch
+                            http://www.truetex.com
+
+                                       Permission to copy granted provided
+                                       this entire README document is included.
+                                       
+The 9 Universal Modern fonts are Windows ANSI TrueType versions of certain
+Computer Modern typeface styles used in TeX and LaTeX.  We created these fonts
+using the same precise techniques we used to convert the Computer Modern fonts
+to TrueType, except that the character sets and encoding implemented in the
+fonts follow the ANSI standard instead of the TeX versions, thus allowing the
+typefaces to be used with ordinary Windows applications.  This conversion
+involved a substantial number of new METAFONT designs (mostly taken from what
+others have posted on CTAN), since so many of the ANSI characters are not
+found in the original TeX fonts.
+
+Because the Universal Modern fonts contain the complete ANSI character set in
+a Windows ANSI encoding, they are fully compatible with non-TeX Windows
+applications using English or Western European languages.  These fonts are
+especially suitable:
+
+   For use with non-TeX applications to create a graphic inserts,
+	tables, or other items to be included in TeX documents
+	via the TeX \special command.
+
+   For producing documents with text having a ``TeX look'',
+	but using a non-TeX application.
+
+The fonts and their names are as follows:
+
+umb10     Universal Modern Bold
+umbx10    Universal Modern Bold Extended
+umbxsl10  Universal Modern Bold Extended Slanted
+umbxti10  Universal Modern Bold Extended Text Italic
+umitt10   Universal Modern Typewriter Italic
+umr10     Universal Modern Roman
+umsltt10  Universal Modern Typewriter Slanted
+umti10    Universal Modern Italic
+umtt10    Universal Modern Typewriter
+
+The conversions were done at the 10-point optical size, although of course
+they may be scaled to other sizes linearly by Windows applications.
+
+A new release on 2 Sep 2005 modified the embedding properties of the fonts
+to allow "installable embedding" (the least restrictive setting).  Previously
+the fonts were set for "print and preview embedding only".
+
+Acknowledgments:  The original CM fonts in METAFONT form are due to Donald
+Knuth, as documented in volume E of the Computers and Typesetting series,
+_Computer Modern Typefaces_ (1986).  Various other authors have produced
+METAFONT designs for the ANSI characters not found in the TeX usage, which we
+converted to complete our ANSI fonts.
+
+For information on our commercial implmentation of TeX and LaTeX for Windows,
+see:
+
+  http://www.truetex.com/
