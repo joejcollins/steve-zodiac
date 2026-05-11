@@ -3,7 +3,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
 \ProvidesClass{SSSongbook}
-[2010/03/19 Shropshire Strummers Songbook]
+[2010/03/19 Stretton Strummers Songbook]
 
 %% 
 % Options inherited from book.cls and songbook.cls
