@@ -1,0 +1,7 @@
+title: Steve Zodiac
+description: PDF index for the Steve Zodiac project
+theme: minima
+markdown: kramdown
+
+baseurl: "/steve-zodiac"
+
