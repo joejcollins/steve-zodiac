@@ -1,14 +1,20 @@
 ---
 layout: default
-title: Steve Zodiac PDF Index
+title: Style Docs
 ---
-## Steve Zodiac PDF Index
+## Style Docs
 
-This directory contains the following PDF documents:
+These styles were used:
 
 - [LaTeX Draft Watermark.pdf](LaTeX%20Draft%20Watermark.pdf)
 - [LaTeX GChords.pdf](LaTeX%20GChords.pdf)
 - [LaTeX PdfPages.pdf](LaTeX%20PdfPages.pdf)
 - [LaTeX Songbook.pdf](LaTeX%20Songbook.pdf)
 
-> Note: This page is intended for GitHub Pages deployment using the `docs/` folder as the site source.
+## Cover Art
+
+The font used on the covers is...
+
+umbx10 at 48px high.
+
+The font is a True Type Font (umbx10.ttf) from <http://www.truetex.com/>.
