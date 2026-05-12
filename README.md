@@ -1,5 +1,5 @@
-# songbooks
+# Stretton Strummers Songbooks
 
-Stretton Strummers songbooks in LaTeX.
+...in LaTeX.
 
 See <https://joejcollins.github.io/steve-zodiac/> for notes.
