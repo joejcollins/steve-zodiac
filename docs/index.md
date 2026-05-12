@@ -2,14 +2,14 @@
 layout: default
 title: Style Docs
 ---
-## Style Docs
+## Style Packages
 
 These styles were used:
 
-- [LaTeX Draft Watermark.pdf](LaTeX%20Draft%20Watermark.pdf)
-- [LaTeX GChords.pdf](LaTeX%20GChords.pdf)
-- [LaTeX PdfPages.pdf](LaTeX%20PdfPages.pdf)
-- [LaTeX Songbook.pdf](LaTeX%20Songbook.pdf)
+- [LaTeX Draft Watermark.pdf](packages/LaTeX%20Draft%20Watermark.pdf)
+- [LaTeX GChords.pdf](packages/LaTeX%20GChords.pdf)
+- [LaTeX PdfPages.pdf](packages/LaTeX%20PdfPages.pdf)
+- [LaTeX Songbook.pdf](packages/LaTeX%20Songbook.pdf)
 
 ## Cover Art
 

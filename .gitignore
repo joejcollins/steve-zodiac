@@ -7,6 +7,8 @@
 *.out
 *.toc
 *.pdf
+!docs/*.pdf
+!docs/**/*.pdf
 
 ## Intermediate documents:
 *.dvi
@@ -108,4 +110,3 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
-

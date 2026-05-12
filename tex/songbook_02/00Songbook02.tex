@@ -3,27 +3,27 @@
 
 \makeindex
 \begin{document}
-
+\renewcommand\today{October 2014}
 \SBTitlePage{
-    {\Large THE}\\[\baselineskip]
-    {\LARGE STRETTON STRUMMERS }\\[\baselineskip]
-    {\Huge  Second Coming of The Songbook}\\[\baselineskip]
-    \ifChordBk {for \ukuleleSize} \fi
-    }
-  {Edited by\\
-    His Holiness, the Enlightened and Most Revered\\
-    Duke Ludwig Van Boll III}
+  {\Large THE}\\[\baselineskip]
+  {\LARGE STRETTON STRUMMERS }\\[\baselineskip]
+  {\Huge  Second Coming of The Songbook}\\[\baselineskip]
+  \ifChordBk {for \ukuleleSize} \fi
+}
+{Edited by\\
+  His Holiness, the Enlightened and Most Revered\\
+Duke Ludwig Van Boll III}
 
 \ifChordBk
-  \let\cleardoublepage\clearpage % Start new page on odd or even pages
-  \fancyhead[R,L]{}
-  \tableofcontents %
-  \vfil
-  This songbook is the work of the Stretton Strummers
-  and represents their interpretation of the songs. 
-  You may only use this songbook for private study, 
-  scholarship, or research.\par
-  \pagebreak
+\let\cleardoublepage\clearpage % Start new page on odd or even pages
+\fancyhead[R,L]{}
+\tableofcontents %
+\vfil
+This songbook is the work of the Stretton Strummers
+and represents their interpretation of the songs.
+You may only use this songbook for private study,
+scholarship, or research.\par
+\pagebreak
 \fi
 
 \input{01IWishItCouldBeXmas.tex}
@@ -102,6 +102,6 @@
 \input{74WriteInC.tex}
 
 \ifChordBk
-  \printindex
+\printindex
 \fi
 \end{document}
