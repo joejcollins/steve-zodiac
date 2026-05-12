@@ -51,7 +51,16 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "%DOC%"
-            ]
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
         }
     ],
     "latex-workshop.latex.recipes": [
