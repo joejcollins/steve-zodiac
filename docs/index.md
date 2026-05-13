@@ -33,8 +33,6 @@ These styles were used:
 
 ## Cover Art
 
-The font used on the covers is...
-
-umbx10 at 48px high.
+The font used on the covers is **umbx10** at 48px high.
 
 The font is a True Type Font (umbx10.ttf) from <http://www.truetex.com/>.
