@@ -1,5 +1,16 @@
-%\documentclass[12pt, a5paper, wordbk]{../SSSongbook}
-\documentclass[11pt, a4paper, chordbk]{../SSSongbook}
+\newif\ifwordbook
+\ifdefined\wordbook
+\wordbooktrue
+\else
+\wordbookfalse
+\fi
+
+\ifwordbook
+\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\else
+\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\fi
+
 \usepackage{draftwatermark}
 \SetWatermarkText{Not Blessed by Ludwig Van Boll}
 

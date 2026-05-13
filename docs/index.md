@@ -1,7 +1,27 @@
 ---
 layout: default
-title: Style Docs
+title: Books and Notes
 ---
+## Chordbooks
+
+- [arts_festival_chordbook](songbooks/arts_festival_chordbook.pdf)
+- [christmas_chordbook](songbooks/christmas_chordbook.pdf)
+- [old_time_music_hall_chordbook](songbooks/old_time_music_hall_chordbook.pdf)
+- [songbook_00_chordbook](songbooks/songbook_00_chordbook.pdf)
+- [songbook_01_chordbook](songbooks/songbook_01_chordbook.pdf)
+- [songbook_02_chordbook](songbooks/songbook_02_chordbook.pdf)
+- [songbook_03_chordbook](songbooks/songbook_03_chordbook.pdf)
+
+## Wordbooks
+
+- [arts_festival_wordbook](songbooks/arts_festival_wordbook.pdf)
+- [christmas_wordbook](songbooks/christmas_wordbook.pdf)
+- [old_time_music_hall_wordbook](songbooks/old_time_music_hall_wordbook.pdf)
+- [songbook_00_wordbook](songbooks/songbook_00_wordbook.pdf)
+- [songbook_01_wordbook](songbooks/songbook_01_wordbook.pdf)
+- [songbook_02_wordbook](songbooks/songbook_02_wordbook.pdf)
+- [songbook_03_wordbook](songbooks/songbook_03_wordbook.pdf)
+
 ## Style Packages
 
 These styles were used:

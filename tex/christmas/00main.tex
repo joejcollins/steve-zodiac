@@ -1,18 +1,30 @@
-\documentclass[11pt, a4paper, chordbk]{../SSSongbook}
+\newif\ifwordbook
+\ifdefined\wordbook
+\wordbooktrue
+\else
+\wordbookfalse
+\fi
+
+\ifwordbook
+\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\else
+\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\fi
+
 \makeindex
 \begin{document}
 \renewcommand\today{December 2016}
 \let\cleardoublepage\clearpage % Start new page on odd or even pages
 
 \SBTitlePage{
-    {\LARGE KENNY'S}\\[\baselineskip]
-    {\LARGE KRISTMAS}\\[\baselineskip]
-    {\LARGE KAROL }\\[\baselineskip]
-    {\LARGE KOLLECTION }\\[\baselineskip]
-    {for \ukuleleSize}}
-  {Prepared by\\
-    His Holiness, the Enlightened and Most Revered\\
-    Duke Ludwig Van Boll III}
+  {\LARGE KENNY'S}\\[\baselineskip]
+  {\LARGE KRISTMAS}\\[\baselineskip]
+  {\LARGE KAROL }\\[\baselineskip]
+  {\LARGE KOLLECTION }\\[\baselineskip]
+{for \ukuleleSize}}
+{Prepared by\\
+  His Holiness, the Enlightened and Most Revered\\
+Duke Ludwig Van Boll III}
 
 \ifChordBk
 \let\cleardoublepage\clearpage % Start new page on odd or even pages
@@ -57,4 +69,3 @@ scholarship, or research.\par
 \input{../songbook_01/39Edelweiss.tex}
 
 \end{document}
-

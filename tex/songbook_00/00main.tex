@@ -1,28 +1,38 @@
-%\documentclass[12pt, a5paper, wordbk]{../SSSongbook}
-\documentclass[11pt, a4paper, chordbk]{../SSSongbook}
+\newif\ifwordbook
+\ifdefined\wordbook
+\wordbooktrue
+\else
+\wordbookfalse
+\fi
+
+\ifwordbook
+\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\else
+\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\fi
 
 \makeindex
 \begin{document}
 
 \renewcommand\today{October 2015}
 \SBTitlePage{
-{\Large THE}\\[\baselineskip]
-{\LARGE STRETTON STRUMMERS }\\[\baselineskip]
-{\Huge Songbook To Rule Them All}\\[\baselineskip]
-\ifChordBk {for \ukuleleSize} \fi
+  {\Large THE}\\[\baselineskip]
+  {\LARGE STRETTON STRUMMERS }\\[\baselineskip]
+  {\Huge Songbook To Rule Them All}\\[\baselineskip]
+  \ifChordBk {for \ukuleleSize} \fi
 }
 {Compiled by\\
 The Stretton Strummers}
 
 \ifChordBk
-  \fancyhead[R,L]{}
-  \tableofcontents %
-  \vfil
-  This songbook is the work of the Stretton Strummers
-  and represents their interpretation of the songs.
-  You may only use this songbook for private study,
-  scholarship, or research.\par
-  \pagebreak
+\fancyhead[R,L]{}
+\tableofcontents %
+\vfil
+This songbook is the work of the Stretton Strummers
+and represents their interpretation of the songs.
+You may only use this songbook for private study,
+scholarship, or research.\par
+\pagebreak
 \fi
 
 % Song book 1
@@ -145,30 +155,30 @@ The Stretton Strummers}
 
 \ifChordBk
 
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
 
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
 
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
 
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
-  \strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
+\strut\cleardoublepage%
 
-  \printindex
+\printindex
 \fi
 \end{document}
