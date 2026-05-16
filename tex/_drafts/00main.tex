@@ -1,4 +1,16 @@
-\documentclass[11pt, a4paper, chordbk]{../SSSongbook}
+\newif\ifwordbook
+\ifdefined\wordbook
+\wordbooktrue
+\else
+\wordbookfalse
+\fi
+
+\ifwordbook
+\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\else
+\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\fi
+
 \makeindex
 \begin{document}
 
@@ -12,10 +24,17 @@
   His Holiness, the Enlightened and Most Revered\\
 Duke Ludwig Van Boll III}
 
-\tableofcontents
+\ifChordBk
+\let\cleardoublepage\clearpage % Start new page on odd or even pages
+\fancyhead[R,L]{}
+\tableofcontents %
+\vfil
+This songbook is the work of the Stretton Strummers
+and represents their interpretation of the songs.
+You may only use this songbook for private study,
+scholarship, or research.\par
 \pagebreak
-
-\smallchords
+\fi
 
 \input{01AreYouSleeping.tex}
 \input{01ScienceFictionDoubleFeature.tex}
@@ -24,7 +43,7 @@ Duke Ludwig Van Boll III}
 \input{04AmazingGrace.tex}
 \input{05DownByTheRiverside.tex}
 \input{06LionSleepsTonight.tex}
-\input{07CallMeMaybe.tex}
+\input{08Highwayman.tex}
 
 \printindex
 \end{document}
