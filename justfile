@@ -2,7 +2,7 @@
 _default: help
 
 build_dir := "$(pwd)/docs/songbooks"
-docs := "arts_festival christmas old_time_music_hall songbook_00 songbook_01 songbook_02 songbook_03"
+docs := "arts_festival christmas old_time_music_hall songbook_00 songbook_01 songbook_02 songbook_03 acoustic"
 
 # Build one document
 build doc:
