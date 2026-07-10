@@ -1,0 +1,69 @@
+
+
+
+\newif\ifwordbook
+\ifdefined\wordbook
+\wordbooktrue
+\else
+\wordbookfalse
+\fi
+
+\ifwordbook
+\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\else
+\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\fi
+
+\makeindex
+\begin{document}
+
+\let\cleardoublepage\clearpage % Start new page on odd of even pages
+
+\SBTitlePage{
+  {\Large THE}\\[\baselineskip]
+  {\LARGE ATOMIC KNIGHTS }\\[\baselineskip]
+{\Huge Songbook}}
+{Edited by\\
+  His Holiness, the Enlightened and Most Revered\\
+Duke Ludwig Van Boll III}
+
+\ifChordBk
+\let\cleardoublepage\clearpage % Start new page on odd or even pages
+\fancyhead[R,L]{}
+\tableofcontents %
+\vfil
+This songbook is the work of the Atomic Knights
+and represents their interpretation of the songs.
+You may only use this songbook for private study,
+scholarship, or research.\par
+\pagebreak
+\fi
+
+% John Denver – Take Me Home, Country Roads (G, Em, D, C)
+\input{../songbook_01/15TakeMeHomeCountryRoads.tex}
+% Neil Diamond – Sweet Caroline (easy simplified version)
+% The Beatles – Let It Be
+% The Beatles – Hey Jude
+% Bob Marley – Three Little Birds
+% Ben E. King – Stand by Me
+% Oasis – Wonderwall (use an easy ukulele arrangement)
+
+% The Proclaimers – I'm Gonna Be (500 Miles)
+\input{../songbook_03/34ImGonnaBe500Miles.tex}
+% Bob Dylan – Knockin' on Heaven's Door
+% The Animals – House of the Rising Sun
+% Billy Joel – Piano Man
+% Van Morrison – Brown Eyed Girl
+% ABBA – Dancing Queen
+% Bon Jovi – Livin' on a Prayer
+% The Monkees – I'm a Believer
+% Creedence Clearwater Revival – Bad Moon Rising
+% The Beatles – Yellow Submarine
+% The Beatles – Ob-La-Di, Ob-La-Da
+% The Beatles – Eight Days a Week
+% The Foundations – Build Me Up Buttercup
+
+\ifChordBk
+\printindex
+\fi
+\end{document}
