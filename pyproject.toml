@@ -12,16 +12,13 @@ classifiers = [
 requires-python = ">=3.14"
 dependencies = [
     "dotenv",
-    "matplotlib",
     "mkdocs-mermaid2-plugin",
     "mkdocs",
     "pytest",
     "python-dotenv",
-    "pyarrow",
-    "polars",
     "ruff",
+    "snakefmt",
     "snakemake",
-    "typer",
     "uuid7",
 ]
 

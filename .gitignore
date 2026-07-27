@@ -250,4 +250,5 @@ acs-*.bib
 *.soc
 
 .tests/*
+.snakemake/*
 data/refined/*

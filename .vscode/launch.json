@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Snakemake",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "snakemake",
+      "args": [
+        "-s",
+        "Snakefile",
+        "-n"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
