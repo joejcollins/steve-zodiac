@@ -26,3 +26,23 @@ all:
 help:
     @just --list
 
+# Create or update the requirements file.
+lock:
+	uv lock
+
+# Publish the documentation to Github pages.
+publish:
+	.venv/bin/mkdocs gh-deploy --force --verbose
+
+# Run the snakemake pipeline.
+snake:
+	.venv/bin/snakemake --cores 1
+
+# Run the unit tests.
+test:
+	.venv/bin/pytest ./tests --verbose --color=yes
+
+# Create the virtual environment.
+venv:
+	uv venv .venv --clear
+	uv sync 
