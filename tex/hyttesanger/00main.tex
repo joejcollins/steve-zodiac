@@ -6,9 +6,9 @@
 \fi
 
 \ifwordbook
-\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\documentclass[11pt,a5paper,wordbk,norsk]{../SSSongbook}
 \else
-\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\documentclass[11pt,a4paper,chordbk,norsk]{../SSSongbook}
 \fi
 
 \makeindex
@@ -17,22 +17,22 @@
 \let\cleardoublepage\clearpage % Start new page on odd of even pages
 
 \SBTitlePage{
-  {\Large THE}\\[\baselineskip]
-  {\LARGE HYTTE }\\[\baselineskip]
-{\Huge Songbook}}
-{Edited by\\
-  His Holiness, the Enlightened and Most Revered\\
-Duke Ludwig Van Boll III}
+  {\Large DEN}\\[\baselineskip]
+  {\LARGE STORE }\\[\baselineskip]
+{\huge HYTTESANGBOKEN}}
+{Redigert av\\
+  Hans Hellighet, den opplyste og høyst ærede\\
+Hertug Ludwig Van Boll III}
 
 \ifChordBk
 \let\cleardoublepage\clearpage % Start new page on odd or even pages
 \fancyhead[R,L]{}
 \tableofcontents %
 \vfil
-This songbook is the work of the Ludwig Van Boll
-and represents their interpretation of the songs.
-You may only use this songbook for private study,
-scholarship, or research.\par
+Denne sangboken er et verk av Ludwig Van Boll
+og gjengir deres tolkning av sangene.
+Sangboken kan kun brukes til privat studium, vitenskapelig arbeid
+eller forskningsformål.\par
 \pagebreak
 \fi
 
@@ -49,7 +49,6 @@ scholarship, or research.\par
 \input{../hyttesanger/01AlexanderKiellandsPlass.tex}
 \input{../hyttesanger/02TrosteSang.tex}
 
-
 % Lillebjørn Nilsen – Tanta til Beate
 
 % Vamp – Tir n'a Noir
@@ -57,7 +56,6 @@ scholarship, or research.\par
 % Mods – Tore Tang
 
 % DDE – Det går likar no
-
 
 % Fjellveivisa
 % Per Spelmann

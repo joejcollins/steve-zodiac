@@ -14,6 +14,8 @@
 \DeclareOption{a5paper}{\PassOptionsToClass{a5paper}{book}}
 \DeclareOption{wordbk}{\PassOptionsToClass{wordbk}{songbook}}
 \DeclareOption{chordbk}{\PassOptionsToClass{chordbk}{songbook}}
+\DeclareOption{british}{\PassOptionsToPackage{british}{babel}}
+\DeclareOption{norsk}{\PassOptionsToPackage{norsk}{babel}}
 % Option of Caroline's baritone
 \newif\ifBaritone \Baritonefalse
 \DeclareOption{baritone}{\Baritonetrue}
@@ -30,7 +32,7 @@
 \RequirePackage{songbook} % Songbook layouts
 \RequirePackage{gchords} % Layout the ukulele chords
 \RequirePackage{hyperref} % Hyperlinks in the PDFs
-\RequirePackage[british]{babel} % UK style dates
+\RequirePackage{babel} % UK style dates
 \RequirePackage[T1]{fontenc} % Required for superscripts for ordinals, don't know why
 \RequirePackage{ulem} % Provides the strike out
 \RequirePackage{ifthen} % Used to do conditional transpositions

@@ -41,6 +41,7 @@ rule build_wordbook:
         r"""
         latexmk \
             -cd -pdf -interaction=nonstopmode -halt-on-error \
+            -pdflatex="pdflatex %O '\def\wordbook{{}}\input{{%S}}'" \
             -jobname={wildcards.doc}_wordbook \
             -outdir={workflow.basedir}/docs/songbooks \
             tex/{wildcards.doc}/00main.tex
