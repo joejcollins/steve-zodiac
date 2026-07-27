@@ -1,33 +1,78 @@
-% Classic Norwegian hytte songs
+\newif\ifwordbook
+\ifdefined\wordbook
+\wordbooktrue
+\else
+\wordbookfalse
+\fi
+
+\ifwordbook
+\documentclass[11pt,a5paper,wordbk]{../SSSongbook}
+\else
+\documentclass[11pt,a4paper,chordbk]{../SSSongbook}
+\fi
+
+\makeindex
+\begin{document}
+
+\let\cleardoublepage\clearpage % Start new page on odd of even pages
+
+\SBTitlePage{
+  {\Large THE}\\[\baselineskip]
+  {\LARGE HYTTE }\\[\baselineskip]
+{\Huge Songbook}}
+{Edited by\\
+  His Holiness, the Enlightened and Most Revered\\
+Duke Ludwig Van Boll III}
+
+\ifChordBk
+\let\cleardoublepage\clearpage % Start new page on odd or even pages
+\fancyhead[R,L]{}
+\tableofcontents %
+\vfil
+This songbook is the work of the Ludwig Van Boll
+and represents their interpretation of the songs.
+You may only use this songbook for private study,
+scholarship, or research.\par
+\pagebreak
+\fi
+
 % Jahn Teigen – Optimist
-% A classic allsång song; almost everyone knows the chorus.
+
 % Postgirobygget – Idyll
-% Probably one of the best modern hytte/summer songs.
+
 % deLillos – Neste sommer
-% Very much a Norwegian summer cabin feeling.
+
 % Halvdan Sivertsen – Kjærlighetsvisa
-% Perfect slow campfire song.
+
 % Åge Aleksandersen – Levva livet
-% A proper communal singalong.
-% Lillebjørn Nilsen – Alexander Kiellands plass
-% Folk-style, easy acoustic feel.
+
+\input{../hyttesanger/01AlexanderKiellandsPlass.tex}
+\input{../hyttesanger/02TrosteSang.tex}
+
+
 % Lillebjørn Nilsen – Tanta til Beate
-% Very well known in Norway.
+
 % Vamp – Tir n'a Noir
-% A beautiful Norwegian acoustic favourite.
+
 % Mods – Tore Tang
-% Especially popular in western Norway.
+
 % DDE – Det går likar no
-% More of a party hytte song.
-% Songs often sung at Norwegian gatherings (including hytter)
+
+
 % Fjellveivisa
 % Per Spelmann
+
 % Blåmann, Blåmann bukken min
 % Norge i rødt, hvitt og blått
+
 % Ja, vi elsker dette landet (especially around national celebrations)
-% International hytte favourites
-% Country Roads – John Denver
-% Take Me Home, Country Roads is almost a Norwegian cabin standard
-% Leaving on a Jet Plane – John Denver
-% Stand by Me – Ben E. King
+
+\input{../songbook_01/15TakeMeHomeCountryRoads.tex}
+\input{../songbook_01/30LeavingOnAJetPlane.tex}
+\input{../songbook_02/32StandByMe.tex}
 % Three Little Birds – Bob Marley
+
+\ifChordBk
+\printindex
+\fi
+\end{document}
