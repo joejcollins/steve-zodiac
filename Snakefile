@@ -3,29 +3,50 @@
 BUILD_DIR = "docs/songbooks"
 (DOCS,) = glob_wildcards("tex/{doc}/00main.tex")
 
-
-print(f"Found {len(DOCS)} songbooks: {DOCS}")
-
-
 rule all:
     input:
         expand(f"{BUILD_DIR}/{{doc}}_chordbook.pdf", doc=DOCS),
         expand(f"{BUILD_DIR}/{{doc}}_wordbook.pdf", doc=DOCS),
 
 
-rule build_songbook:
+rule build_chordbook:
     input:
         "tex/{doc}/00main.tex",
     output:
         chordbook=f"{BUILD_DIR}/{{doc}}_chordbook.pdf",
+    params:
+        build_dir=BUILD_DIR,
+    shell:
+        r"""
+        latexmk \
+            -cd -pdf -interaction=nonstopmode -halt-on-error \
+            -jobname={wildcards.doc}_chordbook \
+            -outdir={workflow.basedir}/docs/songbooks \
+            tex/{wildcards.doc}/00main.tex
+        latexmk \
+            -cd -c -interaction=nonstopmode -halt-on-error \
+            -jobname={wildcards.doc}_chordbook \
+            -outdir={workflow.basedir}/docs/songbooks \
+            tex/{wildcards.doc}/00main.tex
+        """
+
+rule build_wordbook:
+    input:
+        "tex/{doc}/00main.tex",
+    output:
         wordbook=f"{BUILD_DIR}/{{doc}}_wordbook.pdf",
     params:
         build_dir=BUILD_DIR,
     shell:
-        """
+        r"""
         latexmk \
             -cd -pdf -interaction=nonstopmode -halt-on-error \
-            -jobname={wildcards.doc}_chordbook \
-            -outdir={params.build_dir} \
+            -jobname={wildcards.doc}_wordbook \
+            -outdir={workflow.basedir}/docs/songbooks \
+            tex/{wildcards.doc}/00main.tex
+        latexmk \
+            -cd -c -interaction=nonstopmode -halt-on-error \
+            -jobname={wildcards.doc}_wordbook \
+            -outdir={workflow.basedir}/docs/songbooks \
             tex/{wildcards.doc}/00main.tex
         """

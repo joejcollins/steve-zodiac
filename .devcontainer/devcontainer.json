@@ -4,9 +4,13 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"charliermarsh.ruff",
 				"james-yu.latex-workshop",
+				"ms-python.python",
 				"shardulm94.trailing-spaces",
+				"snakemake.snakemake-lang",
 				"streetsidesoftware.code-spell-checker",
+				"tamasfe.even-better-toml"
 			],
 			"settings": {
 				"files.eol": "\n",
