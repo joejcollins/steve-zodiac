@@ -10,4 +10,4 @@ cp ./assets/styles/songbook.sty ~/texmf/tex/latex/songbook/
 mktexlsr ~/texmf
 
 # Create the virtual environment.
-make venv
+just venv
