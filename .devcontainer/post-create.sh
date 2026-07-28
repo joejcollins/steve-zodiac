@@ -8,3 +8,6 @@ cp ./assets/styles/gchords.sty ~/texmf/tex/latex/gchords/
 mkdir -p ~/texmf/tex/latex/songbook
 cp ./assets/styles/songbook.sty ~/texmf/tex/latex/songbook/
 mktexlsr ~/texmf
+
+# Create the virtual environment.
+make venv
