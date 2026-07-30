@@ -18,6 +18,7 @@ rule build_chordbook:
         build_dir=BUILD_DIR,
     shell:
         r"""
+        export SOURCE_DATE_EPOCH=0
         latexmk \
             -cd -pdf -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_chordbook \
@@ -39,6 +40,7 @@ rule build_wordbook:
         build_dir=BUILD_DIR,
     shell:
         r"""
+        export SOURCE_DATE_EPOCH=0
         latexmk \
             -cd -pdf -interaction=nonstopmode -halt-on-error \
             -pdflatex="pdflatex %O '\def\wordbook{{}}\input{{%S}}'" \
