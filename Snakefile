@@ -1,7 +1,7 @@
 # Snakemake DSL file - not valid Python syntax for type checkers
 
-BUILD_DIR = "docs/songbooks"
-(DOCS,) = glob_wildcards("tex/{doc}/00main.tex")
+BUILD_DIR = "data/wrapped/"
+(DOCS,) = glob_wildcards("data/raw/{doc}/00main.tex")
 
 rule all:
     input:
@@ -11,7 +11,7 @@ rule all:
 
 rule build_chordbook:
     input:
-        "tex/{doc}/00main.tex",
+        "data/raw/{doc}/00main.tex",
     output:
         chordbook=f"{BUILD_DIR}/{{doc}}_chordbook.pdf",
     params:
@@ -22,18 +22,18 @@ rule build_chordbook:
         latexmk \
             -cd -pdf -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_chordbook \
-            -outdir={workflow.basedir}/docs/songbooks \
+            -outdir={workflow.basedir}/data/wrapped \
             data/raw/{wildcards.doc}/00main.tex
         latexmk \
             -cd -c -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_chordbook \
-            -outdir={workflow.basedir}/docs/songbooks \
+            -outdir={workflow.basedir}/data/wrapped \
             data/raw/{wildcards.doc}/00main.tex
         """
 
 rule build_wordbook:
     input:
-        "tex/{doc}/00main.tex",
+        "data/raw/{doc}/00main.tex",
     output:
         wordbook=f"{BUILD_DIR}/{{doc}}_wordbook.pdf",
     params:
@@ -45,11 +45,11 @@ rule build_wordbook:
             -cd -pdf -interaction=nonstopmode -halt-on-error \
             -pdflatex="pdflatex %O '\def\wordbook{{}}\input{{%S}}'" \
             -jobname={wildcards.doc}_wordbook \
-            -outdir={workflow.basedir}/docs/songbooks \
+            -outdir={workflow.basedir}/data/wrapped \
             data/raw/{wildcards.doc}/00main.tex
         latexmk \
             -cd -c -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_wordbook \
-            -outdir={workflow.basedir}/docs/songbooks \
+            -outdir={workflow.basedir}/data/wrapped \
             data/raw/{wildcards.doc}/00main.tex
         """
