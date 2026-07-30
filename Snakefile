@@ -23,12 +23,12 @@ rule build_chordbook:
             -cd -pdf -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_chordbook \
             -outdir={workflow.basedir}/docs/songbooks \
-            tex/{wildcards.doc}/00main.tex
+            data/raw/{wildcards.doc}/00main.tex
         latexmk \
             -cd -c -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_chordbook \
             -outdir={workflow.basedir}/docs/songbooks \
-            tex/{wildcards.doc}/00main.tex
+            data/raw/{wildcards.doc}/00main.tex
         """
 
 rule build_wordbook:
@@ -46,10 +46,10 @@ rule build_wordbook:
             -pdflatex="pdflatex %O '\def\wordbook{{}}\input{{%S}}'" \
             -jobname={wildcards.doc}_wordbook \
             -outdir={workflow.basedir}/docs/songbooks \
-            tex/{wildcards.doc}/00main.tex
+            data/raw/{wildcards.doc}/00main.tex
         latexmk \
             -cd -c -interaction=nonstopmode -halt-on-error \
             -jobname={wildcards.doc}_wordbook \
             -outdir={workflow.basedir}/docs/songbooks \
-            tex/{wildcards.doc}/00main.tex
+            data/raw/{wildcards.doc}/00main.tex
         """

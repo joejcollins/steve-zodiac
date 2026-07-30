@@ -10,7 +10,6 @@
         "**/.ruff_cache": true,
         "**/*.egg-info": true,
         "**/*.pyc": true,
-        "**/data/**": true
     },
     "files.watcherExclude": {
         "**/__pycache__": true,
