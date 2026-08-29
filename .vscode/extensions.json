@@ -6,6 +6,7 @@
         "shardulm94.trailing-spaces",
         "snakemake.snakemake-lang",
         "streetsidesoftware.code-spell-checker",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "lhl2617.vslilypond"
     ]
 }

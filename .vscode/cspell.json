@@ -6,6 +6,7 @@
     "biblatex",
     "bibtex",
     "booktitle",
+    "charliermarsh",
     "chktex",
     "chordbook",
     "DOCFILE",
@@ -28,12 +29,14 @@
     "Stretton",
     "Swander",
     "synctex",
+    "tamasfe",
     "testpaths",
     "texlive",
     "texmf",
     "toolsai",
     "trixie",
     "umbx",
+    "vslilypond",
     "Xlive"
   ]
 }
