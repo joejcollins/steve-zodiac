@@ -20,6 +20,7 @@ dependencies = [
     "snakefmt",
     "snakemake",
     "uuid7",
+    "python-ly"
 ]
 
 [tool.pytest.ini_options]

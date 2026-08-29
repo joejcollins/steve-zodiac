@@ -2,6 +2,7 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "addlyrics",
     "addopts",
     "biblatex",
     "bibtex",
@@ -9,6 +10,7 @@
     "charliermarsh",
     "chktex",
     "chordbook",
+    "chordmode",
     "DOCFILE",
     "dotenv",
     "gchords",
@@ -16,7 +18,9 @@
     "joejcollins",
     "latexindent",
     "latexmk",
+    "lyricmode",
     "makeidx",
+    "mkdocs",
     "mktexlsr",
     "nonstopmode",
     "pdflatex",
@@ -35,6 +39,7 @@
     "texmf",
     "toolsai",
     "trixie",
+    "tuplet",
     "umbx",
     "vslilypond",
     "Xlive"
